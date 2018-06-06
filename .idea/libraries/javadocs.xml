@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="javadocs">
+    <CLASSES />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Downloads/gson-master.zip!/gson-master/gson/docs/javadocs" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Downloads/gson-master.zip!/gson-master/gson/src/main/java" />
+      <root url="jar://$USER_HOME$/Downloads/gson-master.zip!/gson-master/gson/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
