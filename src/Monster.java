@@ -53,6 +53,10 @@ public class Monster {
             moves.getMove(moveNumber).attack(this, targetMonster);
             canAttack = false;
         }
+        else
+        {
+            System.out.println("IDIOT THIS MONSTER CANNOT ATTACK");
+        }
     }
 
     public MoveSet getMoves()

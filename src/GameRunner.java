@@ -117,6 +117,7 @@ public class GameRunner {
             attackMove = kb.nextInt();
             turnPlayerMonsters[attacker].attack(attackMove, targetMonster);
             //[attacker].getMoves().getMove(attackMove).attack(userMonster, targetMonster); OLD ATTACK CALL
+            x.recoverMonsters(attacker);
             System.out.println(players[playerNumber].getPlayerName() + "'s Monsters: "+ players[playerNumber].getMonsterString());
             System.out.println(players[opponentNumber].getPlayerName() + "'s Monsters: "+ players[opponentNumber].getMonsterString());
         }
@@ -139,6 +140,7 @@ public class GameRunner {
             //System.out.println("AI CHECK: attacker: " + attacker + " target: " + target + " attackMove: " + attackMove);
             //turnPlayerMonsters[attacker].getMoves().getMove(attackMove).attack(userMonster, targetMonster); OLD ATTACK CALL
             turnPlayerMonsters[attacker].attack(attackMove, targetMonster);
+            x.recoverMonsters(attacker);
             System.out.println(players[playerNumber].getPlayerName() + "'s Monsters: "+ players[playerNumber].getMonsterString());
             System.out.println(players[opponentNumber].getPlayerName() + "'s Monsters: "+ players[opponentNumber].getMonsterString());
 

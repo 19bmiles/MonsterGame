@@ -54,6 +54,15 @@ public class PlayerAI extends Player {
         super(z);
         difficulty = x;
     }
+    public void recoverMonsters(int monsterThatActed)
+    {
+        for (int i = 0; i < monsters.length; i++) {
+            if(i != monsterThatActed)
+            {
+                monsters[i].recover();
+            }
+        }
+    }
 
     public int getPlayerType()
     {
