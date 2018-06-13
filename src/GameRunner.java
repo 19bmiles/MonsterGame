@@ -115,7 +115,8 @@ public class GameRunner {
             System.out.println(turnPlayerMonsters[attacker].getBattleMoveString());
             System.out.print("Pick your attack: ");
             attackMove = kb.nextInt();
-            turnPlayerMonsters[attacker].getMoves().getMove(attackMove).attack(userMonster, targetMonster);
+            turnPlayerMonsters[attacker].attack(attackMove, targetMonster);
+            //[attacker].getMoves().getMove(attackMove).attack(userMonster, targetMonster); OLD ATTACK CALL
             System.out.println(players[playerNumber].getPlayerName() + "'s Monsters: "+ players[playerNumber].getMonsterString());
             System.out.println(players[opponentNumber].getPlayerName() + "'s Monsters: "+ players[opponentNumber].getMonsterString());
         }
@@ -136,9 +137,11 @@ public class GameRunner {
             Monster[] turnPlayerMonsters = players[playerNumber].getMonsters();
             attackMove = (int) (Math.random() * 4) + 1;
             //System.out.println("AI CHECK: attacker: " + attacker + " target: " + target + " attackMove: " + attackMove);
-            turnPlayerMonsters[attacker].getMoves().getMove(attackMove).attack(userMonster, targetMonster);
+            //turnPlayerMonsters[attacker].getMoves().getMove(attackMove).attack(userMonster, targetMonster); OLD ATTACK CALL
+            turnPlayerMonsters[attacker].attack(attackMove, targetMonster);
             System.out.println(players[playerNumber].getPlayerName() + "'s Monsters: "+ players[playerNumber].getMonsterString());
             System.out.println(players[opponentNumber].getPlayerName() + "'s Monsters: "+ players[opponentNumber].getMonsterString());
+
         }
     }
 

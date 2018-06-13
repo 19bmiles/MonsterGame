@@ -3,11 +3,13 @@ public class Monster {
     private MoveSet moves;
     private int healthPoints;
     private String monsterName;
+    private boolean canAttack;
     public Monster()
     {
         moves = new MoveSet();
         healthPoints= 0;
         monsterName ="";
+        canAttack = true;
     }
 
     public Monster(MoveSet x, int y, String str1)
@@ -26,6 +28,11 @@ public class Monster {
         }
     }
 
+    public void recover()
+    {
+        canAttack = true;
+    }
+
     public String getMonsterName()
     {
         return monsterName;
@@ -38,6 +45,14 @@ public class Monster {
             x += i + ": " + moves.getMove(i) + " \n";
         }
         return x;
+    }
+
+    public void attack(int moveNumber, Monster targetMonster)
+    {
+        if(canAttack) {
+            moves.getMove(moveNumber).attack(this, targetMonster);
+            canAttack = false;
+        }
     }
 
     public MoveSet getMoves()

@@ -40,6 +40,16 @@ public class Player {
         return playerName;
     }
 
+    public void recoverMonsters(int monsterThatActed)
+    {
+        for (int i = 0; i < monsters.length; i++) {
+            if(i != monsterThatActed)
+            {
+                monsters[i].recover();
+            }
+        }
+    }
+
     public int numberOfAliveMonsters()
     {
         int count = 0;
